@@ -1,0 +1,130 @@
+/* ネオンレッドを基調とした近未来的デザイン + 読みやすさとシンプルさ重視 */
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  padding: 40px 20px;
+  background: #0a0a0a;
+  color: #e6e6e6;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 1em;
+  color: #ffffff;
+  text-shadow: 0 0 10px #ff0033, 0 0 20px #ff3366, 0 0 30px #ff6699;
+  border-bottom: 2px solid #ff0033;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.notice {
+  background: rgba(255, 0, 51, 0.08);
+  border-left: 4px solid #ff0033;
+  box-shadow: 0 0 10px rgba(255, 0, 51, 0.3);
+  padding: 15px;
+  margin: 1.5em auto;
+  border-radius: 8px;
+  max-width: 600px;
+  text-align: left;
+  font-size: 0.95em;
+}
+.notice strong {
+  color: #ff6699;
+}
+
+#videoInput {
+  margin: 10px auto;
+  padding: 8px;
+  border: 2px solid #ff0033;
+  border-radius: 6px;
+  background: #1a1a1a;
+  color: #fff;
+  display: block;
+}
+
+#loopToggleContainer {
+  margin: 1em auto;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #ff6699;
+  font-size: 0.95em;
+}
+
+#loopToggle {
+  transform: scale(1.5);
+}
+
+#processBtn {
+  display: block;
+  margin: 15px auto;
+  background: linear-gradient(45deg, #ff0033, #ff6699);
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 15px rgba(255, 0, 51, 0.7);
+  transition: transform 0.2s ease-in-out;
+}
+#processBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 51, 1);
+}
+
+#progress-container {
+  margin: 2em auto;
+  max-width: 600px;
+}
+
+#progressBar {
+  width: 100%;
+  height: 20px;
+  appearance: none;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#progressBar::-webkit-progress-bar {
+  background: #222;
+}
+#progressBar::-webkit-progress-value {
+  background: linear-gradient(to right, #ff0033, #ff3366);
+  box-shadow: 0 0 10px rgba(255, 0, 51, 0.7);
+}
+#progressBar::-moz-progress-bar {
+  background: linear-gradient(to right, #ff0033, #ff3366);
+}
+
+#progressText {
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: #ff6699;
+}
+
+#downloads {
+  margin-top: 2em;
+}
+
+#downloads a {
+  display: block;
+  margin: 0.5em auto;
+  color: #ff0033;
+  text-decoration: none;
+  text-shadow: 0 0 5px rgba(255, 0, 51, 0.8);
+  transition: text-shadow 0.2s;
+}
+#downloads a:hover {
+  text-shadow: 0 0 15px rgba(255, 0, 51, 1);
+}
+
+#canvas,
+#hiddenVideo {
+  display: none;
+}

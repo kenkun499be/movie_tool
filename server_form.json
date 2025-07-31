@@ -1,0 +1,138 @@
+{
+    "namespace": "server_form",
+    "$schema": "https://kalmemarq.github.io/Bugrock-JSON-UI-Schemas/ui.schema.json",
+
+    "long_form": {
+        "type": "panel",
+        "size": [1920, 1080],
+        "controls": [
+            {
+                "default_long_form@common_dialogs.main_panel_no_buttons": {
+                    "$title_panel": "common_dialogs.standard_title_label",
+                    "$title_size": ["100% - 14px", 10],
+                    "size": [1920, 1080],
+                    "$text_name": "#title_text",
+                    "$title_text_binding_type": "none",
+                    "$child_control": "server_form.long_form_panel",
+                    "layer": 2,
+                    "bindings": [
+                        {
+                            "binding_name": "#title_text"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "((#title_text - 'Custom Form') = #title_text)",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "custom_long_form": {
+                    "type": "panel",
+                    "size": [500, 300],
+                    "layer": 2,
+                    "controls": [
+                        {
+                            "indent_panel": {
+                                "type": "panel",
+                                "size": ["100% - 16px", "100%"],
+                                "controls": [
+                                    {
+                                        "my_form_label@server_form.my_form_label": {}
+                                    },
+                                    {
+                                        "my_close_button@server_form.my_close_button": {
+                                            "offset": [8, -8],
+                                            "layer": 64
+                                        }
+                                    },
+                                    {
+                                        "my_form_background@server_form.my_form_background": {}
+                                    },
+
+                                    {
+                                        "content_stack": {
+                                            "type": "stack_panel",
+                                            "size": ["100%", "100%"],
+                                            "orientation": "vertical",
+                                            "controls": [
+                                                {
+                                                    "padding": {
+                                                        "type": "panel",
+                                                        "size": ["100%", "100%"]
+                                                    }
+                                                },
+                                                {
+                                                    "my_form_body@server_form.my_form_body": {}
+                                                },
+                                                {
+                                                    "button_panel@server_form.my_super_custom_panel_main": {}
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "bindings": [
+                        {
+                            "binding_name": "#title_text"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#title_text = 'Custom Form')",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+
+    
+
+    "my_form_body": {
+        "type": "panel",
+        "anchor_from": "top_middle",
+        "size": [1920, 1080],
+        "layer": 8,
+        "controls": [
+            {
+                "form_body_text": {
+                    "type": "label",
+                    "text": "#form_text",
+                    "layer": 8,
+                    "bindings": [
+                        {
+                            "binding_name": "#form_text"
+                        }
+                    ]
+                }
+            },
+            {
+                "my_form_background@server_form.image_uv_animation": {
+                    "size": ["100% - 22px", "100%"]
+                }
+            }
+        ]
+    },
+
+    
+
+
+    "my_form_background": {
+    "type": "image",
+    "size": ["100% + 5px", "100% + 5px"],
+    "texture": "textures/ui/movie",
+    "uv_size": [854, 480],
+    "alpha": 1,
+    "uv": "@server_form.image_uv_animation"
+  },
+
+  "image_uv_animation": {
+    "anim_type": "aseprite_flip_book",
+    "initial_uv": [0, 0]
+  }
+}
